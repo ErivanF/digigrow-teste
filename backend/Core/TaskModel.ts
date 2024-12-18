@@ -3,7 +3,7 @@ interface ICreateTask {
   name: string;
   description: string;
 }
-export default class Task {
+export default class TaskModel {
   id?: string;
   name: string;
   description: string;
