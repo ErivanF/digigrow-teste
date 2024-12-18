@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import TaskModel from "../Core/TaskModel";
 import TaskRepository from "../Core/TaskRepository";
 import DBTask from "./TaskSchema";
@@ -23,7 +24,8 @@ export default class TaskCollection implements TaskRepository {
     return new TaskModel({ name, description, id });
   }
   async delete(taskId: string) {
-    await DBTask.findByIdAndDelete(taskId);
+    const id = new mongoose.Types.ObjectId(taskId);
+    await DBTask.findByIdAndDelete(id);
     return;
   }
 }
