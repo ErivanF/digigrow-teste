@@ -78,7 +78,7 @@ Body:
 ]
 ```
 
-### Delee task
+### Delete task
 
 Endpoint: /task/{id}
 Method: DELETE
@@ -97,6 +97,10 @@ Styled components
 
 ### Setup
 
+Edit API URL on ./frontend/src/Services/index.tsx
+
+Run:
+
 ```shell
 cd frontend
 npm install
@@ -104,6 +108,8 @@ npm run dev
 ```
 
 ## Next potential updates
+
+Front end API in .env file
 
 Automated tests (Jest and Cypress)
 
