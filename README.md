@@ -109,6 +109,8 @@ npm run dev
 
 ## Next potential updates
 
+Learn and apply ramda
+
 Front end API in .env file
 
 Automated tests (Jest and Cypress)
