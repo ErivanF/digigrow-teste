@@ -2,9 +2,9 @@
 
 ## Libraries used
 
-Express
+- Express
 
-Mongoose
+- Mongoose
 
 ## Run API
 
@@ -36,7 +36,9 @@ npm run dev
 ### Create task
 
 Endpoint: /task
+
 Method: POST
+
 Body:
 
 ```JSON
@@ -47,7 +49,9 @@ Body:
 ```
 
 Response:
+
 Status: 201 Created
+
 Body:
 
 ```JSON
@@ -61,11 +65,15 @@ Body:
 ### Get tasks
 
 Endpoint: /task
+
 Method: GET
+
 Body: No body
 
 Response:
+
 Status: 200 OK
+
 Body:
 
 ```JSON
@@ -81,19 +89,22 @@ Body:
 ### Delete task
 
 Endpoint: /task/{id}
+
 Method: DELETE
+
 Body: No body
 
 Response:
+
 Status: 204 No content
 
 ## Frontend
 
 ### Libraries
 
-Vite
+- Vite
 
-Styled components
+- Styled components
 
 ### Setup
 
@@ -109,10 +120,10 @@ npm run dev
 
 ## Next potential updates
 
-Learn and apply ramda
+- Learn and apply ramda
 
-Front end API in .env file
+- Front end API in .env file
 
-Automated tests (Jest and Cypress)
+- Automated tests (Jest and Cypress)
 
-Create a full Docker image in order to simplify the local development environment
+- Create a full Docker image in order to simplify the local development environment
