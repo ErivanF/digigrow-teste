@@ -1,5 +1,11 @@
 # Simple task manager in React and Node
 
+## Libraries used
+
+Express
+
+Mongoose
+
 ## Run API
 
 First create the .env file for backend
@@ -8,6 +14,12 @@ First create the .env file for backend
 
 Requires MONGO_USERNAME, MONGO_PASSWORD, MONGO_URL_DOCKER and MONGO_URI_APP.
 MONGO_URL_DOCKER uses '@mongo' as host name and MONGO_URI_APP uses '@localhost' as host name.
+
+Run:
+
+```shell
+docker compose up -d
+```
 
 ### Using external database
 
@@ -40,7 +52,7 @@ Body:
 
 ```JSON
 {
-    "id":"",
+    "id":"6763b6939824d94e12ebf888",
     "name": "taskName",
     "description": "Your task details",
 }
@@ -59,7 +71,7 @@ Body:
 ```JSON
 [
     {
-        "id":"",
+        "id":"6763b6939824d94e12ebf888",
         "name": "taskName",
         "description": "Your task details",
     }
@@ -74,3 +86,25 @@ Body: No body
 
 Response:
 Status: 204 No content
+
+## Frontend
+
+### Libraries
+
+Vite
+
+Styled components
+
+### Setup
+
+```shell
+cd frontend
+npm install
+npm run dev
+```
+
+## Next potential updates
+
+Automated tests (Jest and Cypress)
+
+Create a full Docker image in order to simplify the local development environment

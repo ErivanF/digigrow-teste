@@ -3,15 +3,21 @@ import { CreatedTask, Task } from "../Types";
 const BaseURL = "http://localhost:8000/";
 
 export async function FetchTasks() {
-  const response = await fetch(`${BaseURL}task`);
-  return (await response.json()) as Task[];
+  const data = await fetch(`${BaseURL}task`).then((response) => {
+    return response.json();
+  });
+  return data as Task[];
 }
 export async function CreateTask(newTask: CreatedTask) {
-  const response = await fetch(`${BaseURL}task`, {
+  const body = JSON.stringify(newTask);
+  fetch(`${BaseURL}task`, {
     method: "POST",
-    body: JSON.stringify(newTask),
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: body,
   });
-  return (await response.json()) as Task;
 }
 export async function DeleteTask(id: string) {
   await fetch(`${BaseURL}task/${id}`, {

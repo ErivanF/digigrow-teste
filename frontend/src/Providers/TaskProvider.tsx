@@ -16,14 +16,11 @@ export default function TaskProvider({ children }: IProps) {
   const [tasks, setTasks] = useState<Task[]>([]);
   const GetList = async () => {
     FetchTasks().then((tasks) => {
-      console.log(tasks);
       setTasks(tasks);
     });
   };
   const Add = async (newTask: CreatedTask) => {
-    CreateTask(newTask).then((data) => {
-      setTasks((prevTasks) => [...prevTasks, data]);
-    });
+    CreateTask(newTask);
   };
   const Remove = async (id: string) => {
     DeleteTask(id).then(() => {
@@ -37,6 +34,4 @@ export default function TaskProvider({ children }: IProps) {
     </TaskContext.Provider>
   );
 }
-export function UseTask() {
-  return useContext(TaskContext);
-}
+export const UseTask = () => useContext(TaskContext);

@@ -1,21 +1,18 @@
 import "./App.css";
+import { Route, Routes } from "react-router";
+import Layout from "./Components/Layout";
+import ListPage from "./Pages/List";
+import NewTask from "./Pages/NewTask";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<ListPage />} />
+          <Route path="/new" element={<NewTask />} />
+        </Routes>
+      </Layout>
     </div>
   );
 }
