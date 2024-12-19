@@ -18,7 +18,7 @@ export default class TaskCollection implements TaskRepository {
   }
   async save(newTask: TaskModel) {
     const { name, description } = newTask;
-    const newDBTask = new DBTask(name, description);
+    const newDBTask = new DBTask({ name, description });
     newDBTask.save();
     const id = newDBTask._id.toString();
     return new TaskModel({ name, description, id });

@@ -2,6 +2,17 @@
 
 ## Run API
 
+First create the .env file for backend
+
+### Using Docker
+
+Requires MONGO_USERNAME, MONGO_PASSWORD, MONGO_URL_DOCKER and MONGO_URI_APP.
+MONGO_URL_DOCKER uses '@mongo' as host name and MONGO_URI_APP uses '@localhost' as host name.
+
+### Using external database
+
+Requires only MONGO_URI_APP as connection string.
+
 ```shell
 cd backend
 npm install

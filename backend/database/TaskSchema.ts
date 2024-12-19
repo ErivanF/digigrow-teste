@@ -1,10 +1,9 @@
-import mongoose from "./config";
-import { Schema } from "mongoose";
+import { model, Schema } from "mongoose";
 
 const TaskSchema = new Schema({
-  name: { type: String, require: true },
-  description: { type: String, require: true },
+  name: { type: String, required: true },
+  description: { type: String, required: true },
 });
 
-const DBTask = mongoose.model("Task", TaskSchema);
+const DBTask = model("Task", TaskSchema);
 export default DBTask;

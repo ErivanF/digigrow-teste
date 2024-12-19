@@ -1,11 +1,13 @@
-import express, { Express, Request, Response, Application } from "express";
+import express, { Application } from "express";
 import dotenv from "dotenv";
-import CreateRoutes from "./routes";
+import CreateRoutes from "./routes/TaskRoutes";
+import ConnectToDB from "./database/config";
 
-//For env File
 dotenv.config();
-
 const app: Application = express();
+app.use(express.json());
+ConnectToDB();
+
 const port = process.env.PORT || 8000;
 CreateRoutes(app);
 app.listen(port, () => {
